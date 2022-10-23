@@ -1,0 +1,39 @@
+{
+  "name": "@issenn/novel-ai-tag",
+  "version": "0.0.1",
+  "description": "Tampermonkey userscript for novel ai tag.",
+  "author": "Issenn Knight",
+  "homepage": "https://github.com/issenn/userscript-novel-ai#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/issenn/userscript-novel-ai.git",
+    "directory": "packages/novel-ai-tag"
+  },
+  "bugs": {
+    "url" : "https://github.com/issenn/userscript-novel-ai/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "private": true,
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0",
+    "npm": ">= 7.0.0",
+    "pnpm": ">=7"
+  },
+  "dependencies": {
+    "@issenn/userscript-config": "workspace:*",
+    "@issenn/userscript-utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.3",
+    "rollup": "^3.2.3",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8",
+    "vite-plugin-monkey": "^2.8.0",
+    "vite-tsconfig-paths": "^3.5.2"
+  }
+}

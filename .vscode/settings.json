@@ -1,0 +1,16 @@
+{
+    "npm.packageManager": "pnpm",
+    "cSpell.words": [
+        "codeceptjs",
+        "codepaths",
+        "issenn",
+        "preinstall",
+        "saraba",
+        "stylelint",
+        "subdirs",
+        "Tampermonkey",
+        "tsbuildinfo",
+        "tsup",
+        "userscript"
+    ]
+}

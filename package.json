@@ -1,0 +1,52 @@
+{
+  "name": "@issenn/userscript-novel-ai",
+  "version": "0.0.0",
+  "description": "Tampermonkey userscript project.",
+  "author": "Issenn Knight",
+  "homepage": "https://github.com/issenn/userscript-novel-ai#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/issenn/userscript-novel-ai.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/issenn/userscript-novel-ai/issues"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "",
+    "postinstall:git-hook": "pnpm simple-git-hooks",
+    "build": "pnpm --recursive --filter=./packages/* run build",
+    "build:parallel": "pnpm --recursive --parallel --filter=./packages/* run build",
+    "tsc": "tsc",
+    "generate:tsc": "tsc --init",
+    "generate:tsc:zh-CN": "tsc --init --locale zh-CN",
+    "clean:accounts": "",
+    "prettier:check": "prettier --check './**/*.{js,json,css}' && echo \"✅ Prettier validated\"",
+    "prettier:write": "prettier --write './**/*.{js,json,css}'",
+    "stylelint": "stylelint './{components,stories}/**/*.js' && echo \"✅ Stylelint validated\"",
+    "lint": "",
+    "lint:fix": "",
+    "storybook": "start-storybook -p 6006",
+    "test": "",
+    "test:sandbox": "",
+    "test:functional": "pnpm run build && codeceptjs run",
+    "prepare": "",
+    "release": "",
+    "release:prerelease": ""
+  },
+  "private": true,
+  "workspaces": [
+    "./packages/*",
+    "./shared/*"
+  ],
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0",
+    "npm": ">= 7.0.0",
+    "pnpm": ">=7"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
