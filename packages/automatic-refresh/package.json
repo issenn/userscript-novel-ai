@@ -1,6 +1,6 @@
 {
   "name": "@issenn/automatic-refresh",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Tampermonkey userscript for automatic refresh.",
   "author": "Issenn Knight",
   "homepage": "https://github.com/issenn/userscript-novel-ai#readme",
@@ -25,8 +25,7 @@
     "pnpm": ">=7"
   },
   "dependencies": {
-    "@issenn/userscript-config": "workspace:*",
-    "@issenn/userscript-utils": "workspace:*"
+    "@issenn/userscript-config": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^4.8.4",

@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import monkey, { cdn } from 'vite-plugin-monkey';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { userscript } from '@issenn/userscript-config';
-// import { dataURI } from '@issenn/userscript-utils';
 
 
 // https://vitejs.dev/config/
@@ -13,7 +12,6 @@ export default defineConfig({
       entry: 'src/main.ts',
       userscript: {
         ...userscript,
-        // icon: dataURI('./src/assets/default.logo.svg'),
         name: {
           '': 'Automatic refresh',
           en: 'Automatic refresh',
@@ -29,12 +27,13 @@ export default defineConfig({
         website: `https://greasyfork.org/scripts/453583`,
         updateURL: `https://github.com/issenn/userscript-novel-ai/raw/master/packages/automatic-refresh/dist/@issenn/automatic-refresh.meta.js`,
         downloadURL: `https://github.com/issenn/userscript-novel-ai/raw/master/packages/automatic-refresh/dist/@issenn/automatic-refresh.user.js`,
-        include: [
-          /^http?:\/\/.*\.saraba1st\.com\/2b\/.*$/
-        ],
+        // include: [
+        //   /^http?:\/\/.*\.saraba1st\.com\/2b\/.*$/
+        // ],
         match: [
           'http://*.saraba1st.com/2b/*',
-          'https://*.saraba1st.com/2b/*'
+          'https://*.saraba1st.com/2b/*',
+          'https://bbs4.2djgame.net/home/forum.php*',
         ],
       },
       build: {
