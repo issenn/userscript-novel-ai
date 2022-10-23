@@ -3,7 +3,7 @@
 // @name:en          Automatic refresh
 // @name:zh          自动刷新
 // @namespace        https://github.com/issenn
-// @version          0.1.0
+// @version          0.1.1
 // @author           issenn
 // @description      Automatic refresh.
 // @description:en   Automatic refresh.
@@ -14,6 +14,8 @@
 // @website          https://greasyfork.org/scripts/453583
 // @source           https://github.com/issenn/userscript-novel-ai.git
 // @supportURL       https://github.com/issenn/userscript-novel-ai/issues
+// @downloadURL      https://github.com/issenn/userscript-novel-ai/raw/master/packages/automatic-refresh/dist/@issenn/automatic-refresh.user.js
+// @updateURL        https://github.com/issenn/userscript-novel-ai/raw/master/packages/automatic-refresh/dist/@issenn/automatic-refresh.meta.js
 // @include          /^http?:\/\/.*\.saraba1st\.com\/2b\/.*$/
 // @match            http://*.saraba1st.com/2b/*
 // @match            https://*.saraba1st.com/2b/*

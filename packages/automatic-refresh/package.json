@@ -1,6 +1,6 @@
 {
   "name": "@issenn/automatic-refresh",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tampermonkey userscript for automatic refresh.",
   "author": "Issenn Knight",
   "homepage": "https://github.com/issenn/userscript-novel-ai#readme",

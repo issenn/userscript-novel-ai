@@ -27,8 +27,8 @@ export default defineConfig({
         // author: 'issenn',
         // namespace: 'https://github.com/issenn',
         website: `https://greasyfork.org/scripts/453583`,
-        // updateURL: `https://updateURL`,
-        // downloadURL: `https://downloadURL`,
+        updateURL: `https://github.com/issenn/userscript-novel-ai/raw/master/packages/automatic-refresh/dist/@issenn/automatic-refresh.meta.js`,
+        downloadURL: `https://github.com/issenn/userscript-novel-ai/raw/master/packages/automatic-refresh/dist/@issenn/automatic-refresh.user.js`,
         include: [
           /^http?:\/\/.*\.saraba1st\.com\/2b\/.*$/
         ],
