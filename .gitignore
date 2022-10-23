@@ -874,6 +874,7 @@ $RECYCLE.BIN/
 !**/dist/@issenn/
 **/dist/@issenn/*
 !packages/**/dist/@issenn/*.user.js
+!packages/**/dist/@issenn/*.meta.js
 # !shared/**/dist/*.js
 # !shared/**/dist/*.d.ts
 # !shared/**/dist/*.js.map

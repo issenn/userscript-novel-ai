@@ -25,6 +25,9 @@
     "lint:fix": "eslint . --fix"
   },
   "packageManager": "pnpm@7.13.6",
+  "dependencies": {
+    "@issenn/userscript-utils": "workspace:*"
+  },
   "devDependencies": {
     "typescript": "^4.8.4",
     "tsup": "6.3.0",
