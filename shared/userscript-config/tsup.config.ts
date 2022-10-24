@@ -5,7 +5,15 @@ export default defineConfig({
   clean: true,
   target: 'esnext',
   outDir: 'dist',
-  format: ['esm'],
+  format: [
+    'cjs',
+    'esm'
+  ],
+
+  loader: {
+    // '.jpg': 'dataurl',
+    '.svg': 'dataurl',
+  },
 
   sourcemap: true,
 

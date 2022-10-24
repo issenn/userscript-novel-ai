@@ -1,33 +1,57 @@
 {
   "name": "@issenn/userscript-utils",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Tampermonkey userscript utils",
-  "author": "issenn",
+  "author": "Issenn Knight",
+  "homepage": "https://github.com/issenn/userscript-novel-ai#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/issenn/userscript-novel-ai.git",
+    "directory": "shared/userscript-utils"
+  },
+  "bugs": {
+    "url": "https://github.com/issenn/userscript-novel-ai/issues"
+  },
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
     }
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "dev": "tsup --watch",
-    "build": "tsup",
-    "test:type": "tsc --noEmit",
-    "test": "pnpm run test:type",
+    "dev": "pnpm run build:fast --watch",
+    "build:fast": "pnpm run build --no-dts",
+    "build": "pnpm run build:lib",
+    "build:lib": "tsup",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "pnpm run test:type",
+    "test:type": "tsc --noEmit",
+    "clean": "pnpm run clean:build",
+    "clean:build": "pnpm run clean:build:lib",
+    "clean:build:lib": "rimraf dist",
+    "clean:node_modules": "rimraf node_modules",
+    "showConfig:tsc": "tsc --showConfig"
+  },
+  "private": true,
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0",
+    "npm": ">= 7.0.0",
+    "pnpm": ">=7"
   },
   "packageManager": "pnpm@7.13.6",
   "devDependencies": {
     "@types/node": "^18.11.3",
-    "typescript": "^4.8.4",
-    "tsup": "6.3.0"
+    "rimraf": "^3.0.2",
+    "tsup": "6.3.0",
+    "typescript": "^4.8.4"
   }
 }

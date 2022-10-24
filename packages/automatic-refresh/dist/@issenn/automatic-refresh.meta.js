@@ -3,7 +3,7 @@
 // @name:en          Automatic refresh
 // @name:zh          自动刷新
 // @namespace        https://github.com/issenn
-// @version          0.1.1
+// @version          0.1.2
 // @author           issenn
 // @description      Automatic refresh.
 // @description:en   Automatic refresh.
@@ -16,8 +16,8 @@
 // @supportURL       https://github.com/issenn/userscript-novel-ai/issues
 // @downloadURL      https://github.com/issenn/userscript-novel-ai/raw/master/packages/automatic-refresh/dist/@issenn/automatic-refresh.user.js
 // @updateURL        https://github.com/issenn/userscript-novel-ai/raw/master/packages/automatic-refresh/dist/@issenn/automatic-refresh.meta.js
-// @include          /^http?:\/\/.*\.saraba1st\.com\/2b\/.*$/
 // @match            http://*.saraba1st.com/2b/*
 // @match            https://*.saraba1st.com/2b/*
+// @match            https://bbs4.2djgame.net/home/forum.php*
 // @contributionURL  https://afdian.net/@issenn
 // ==/UserScript==

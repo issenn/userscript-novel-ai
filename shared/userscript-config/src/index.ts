@@ -1,5 +1,5 @@
 import type { MonkeyUserScript } from 'vite-plugin-monkey';
-import { dataURI } from '@issenn/userscript-utils';
+import defaultLogoSvg from "./assets/default.logo.svg";
 
 export const userscript: MonkeyUserScript = {
   namespace: `https://github.com/issenn`,
@@ -8,7 +8,7 @@ export const userscript: MonkeyUserScript = {
   homepageURL: `https://github.com/issenn/userscript-novel-ai`,
   // website: ``,
   source: `https://github.com/issenn/userscript-novel-ai.git`,
-  defaulticon: dataURI('./src/assets/default.logo.svg'),
+  defaulticon: defaultLogoSvg,
   supportURL: `https://github.com/issenn/userscript-novel-ai/issues`,
   contributionURL: `https://afdian.net/@issenn`,
   // compatible: `chrome Tampermonkey`,

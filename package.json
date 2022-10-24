@@ -1,26 +1,24 @@
 {
   "name": "@issenn/userscript-novel-ai",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Tampermonkey userscript project.",
   "author": "Issenn Knight",
   "homepage": "https://github.com/issenn/userscript-novel-ai#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/issenn/userscript-novel-ai.git"
+    "url": "git+https://github.com/issenn/userscript-novel-ai.git"
   },
   "bugs": {
-    "url" : "https://github.com/issenn/userscript-novel-ai/issues"
+    "url": "https://github.com/issenn/userscript-novel-ai/issues"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "postinstall": "",
     "postinstall:git-hook": "pnpm simple-git-hooks",
+    "dev": "",
     "build": "pnpm --recursive --filter=./packages/* run build",
+    "build:lib": "pnpm --recursive --filter=./shared/* run build:lib",
     "build:parallel": "pnpm --recursive --parallel --filter=./packages/* run build",
-    "tsc": "tsc",
-    "generate:tsc": "tsc --init",
-    "generate:tsc:zh-CN": "tsc --init --locale zh-CN",
-    "clean:accounts": "",
     "prettier:check": "prettier --check './**/*.{js,json,css}' && echo \"✅ Prettier validated\"",
     "prettier:write": "prettier --write './**/*.{js,json,css}'",
     "stylelint": "stylelint './{components,stories}/**/*.js' && echo \"✅ Stylelint validated\"",
@@ -32,7 +30,15 @@
     "test:functional": "pnpm run build && codeceptjs run",
     "prepare": "",
     "release": "",
-    "release:prerelease": ""
+    "release:prerelease": "",
+    "clean": "pnpm --recursive --filter=./shared/* run clean",
+    "clean:build": "pnpm --recursive --filter=./shared/* run clean:build",
+    "clean:build:lib": "pnpm --recursive --filter=./shared/* run clean:build:lib",
+    "clean:node_modules": "pnpm --recursive --filter=./shared/* run clean:node_modules",
+    "generate:tsc": "pnpm tsc --init",
+    "generate:tsc:en-US": "pnpm tsc --init --locale en-US",
+    "generate:tsc:zh-CN": "pnpm tsc --init --locale zh-CN",
+    "showConfig:tsc": "tsc --showConfig"
   },
   "private": true,
   "workspaces": [
@@ -44,9 +50,8 @@
     "npm": ">= 7.0.0",
     "pnpm": ">=7"
   },
-  "dependencies": {
-  },
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "typescript": "^4.8.4"
   }
 }
