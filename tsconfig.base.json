@@ -1,3 +1,27 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./tsconfig.default",
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ],
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "types": [],
+    "resolveJsonModule": true,
+
+    "sourceMap": true,
+    "newLine": "lf",
+
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "strict": true,
+
+    "skipLibCheck": true
+  }
 }

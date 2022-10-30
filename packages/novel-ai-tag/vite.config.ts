@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import monkey, { cdn } from 'vite-plugin-monkey';
+import monkey from 'vite-plugin-monkey';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { userscript } from '@issenn/userscript-config';
 import { dataURI } from '@issenn/userscript-utils';
@@ -13,17 +13,39 @@ export default defineConfig({
       entry: 'src/main.ts',
       userscript: {
         ...userscript,
-        // icon: 'https://vitejs.dev/logo.svg',
-        icon: dataURI('./src/assets/ai.logo.svg'),
-        name: 'Novel AI Tag 支持',
-        description: 'Novel AI Tag 关联支持',
-        author: 'issenn',
-        namespace: 'https://github.com/issenn',
-        match: ['https://www.baidu.com/'],
+        name: {
+          '': 'Novel AI Tag support',
+          zh: 'Novel AI Tag 支持',
+          en: 'Novel AI Tag support',
+        },
+        description: {
+          '': 'Novel AI Tag support.',
+          zh: 'Novel AI Tag 关联支持。',
+          en: 'Novel AI Tag support.',
+        },
+        icon: await dataURI('./src/assets/ai.logo.svg'),
+        website: ``,
+        updateURL: ``,
+        downloadURL: ``,
+        // include: [],
+        match: [
+          'https://www.baidu.com/'
+        ],
       },
-    //   build: {
-    //     externalGlobals: {},
-    //   },
+      build: {
+        metaFileName: true,
+        // externalGlobals: {},
+      },
     }),
   ],
+  // optimizeDeps: {
+  //   disabled: false,
+  //   esbuildOptions: {
+  //     loader: {
+  //       // ['.svg']: 'dataurl',
+  //       // '.jpg': 'dataurl',
+  //       // ['.png']: 'file',
+  //     },
+  //   }
+  // },
 });

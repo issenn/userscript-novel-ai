@@ -28,17 +28,16 @@
   ],
   "scripts": {
     "dev": "pnpm run build:fast --watch",
+    "watch": "pnpm run build --watch",
     "build:fast": "pnpm run build --no-dts",
-    "build": "pnpm run build:lib",
-    "build:lib": "tsup",
+    "build": "tsup",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "pnpm run test:type",
     "test:type": "tsc --noEmit",
-    "clean": "pnpm run clean:build",
-    "clean:build": "pnpm run clean:build:lib",
-    "clean:build:lib": "rimraf dist",
-    "clean:node_modules": "rimraf node_modules",
+    "clean": "rimraf dist && pnpm run clean:build",
+    "clean:build": "rimraf dist",
+    "clean:modules": "rimraf node_modules",
     "showConfig:tsc": "tsc --showConfig"
   },
   "private": true,
@@ -47,9 +46,8 @@
     "npm": ">= 7.0.0",
     "pnpm": ">=7"
   },
-  "packageManager": "pnpm@7.13.6",
+  "packageManager": "pnpm@7.14.1",
   "devDependencies": {
-    "rimraf": "^3.0.2",
     "tsup": "6.3.0",
     "typescript": "^4.8.4",
     "vite": "^3.1.8",

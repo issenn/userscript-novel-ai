@@ -14,16 +14,14 @@ export default defineConfig({
         ...userscript,
         name: {
           '': 'Automatic refresh',
-          en: 'Automatic refresh',
           zh: '自动刷新',
+          en: 'Automatic refresh',
         },
         description: {
           '': 'Automatic refresh.',
-          en: 'Automatic refresh.',
           zh: '自动刷新。',
+          en: 'Automatic refresh.',
         },
-        // author: 'issenn',
-        // namespace: 'https://github.com/issenn',
         website: `https://greasyfork.org/scripts/453583`,
         updateURL: `https://github.com/issenn/userscript-novel-ai/raw/master/packages/automatic-refresh/dist/@issenn/automatic-refresh.meta.js`,
         downloadURL: `https://github.com/issenn/userscript-novel-ai/raw/master/packages/automatic-refresh/dist/@issenn/automatic-refresh.user.js`,
@@ -33,7 +31,7 @@ export default defineConfig({
         match: [
           'http://*.saraba1st.com/2b/*',
           'https://*.saraba1st.com/2b/*',
-          'https://bbs4.2djgame.net/home/forum.php*',
+          'https://bbs4.2djgame.net/home/*',
         ],
       },
       build: {

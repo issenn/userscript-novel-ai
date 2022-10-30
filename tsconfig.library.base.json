@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.base",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": false,
+    // "incremental":  true,
+    "composite": false,
+    "stripInternal":  true
+  }
+}

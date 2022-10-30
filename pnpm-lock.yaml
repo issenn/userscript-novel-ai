@@ -4,33 +4,39 @@ importers:
 
   .:
     specifiers:
+      prettier: ^2.7.1
+      rimraf: ^3.0.2
       typescript: ^4.8.4
     devDependencies:
+      prettier: 2.7.1
+      rimraf: 3.0.2
       typescript: 4.8.4
 
   packages/automatic-refresh:
     specifiers:
       '@issenn/userscript-config': workspace:*
-      '@issenn/userscript-utils': workspace:*
       typescript: ^4.8.4
       vite: ^3.1.8
       vite-plugin-monkey: ^2.8.0
       vite-tsconfig-paths: ^3.5.2
     dependencies:
       '@issenn/userscript-config': link:../../shared/userscript-config
-      '@issenn/userscript-utils': link:../../shared/userscript-utils
     devDependencies:
       typescript: 4.8.4
-      vite: 3.1.8
-      vite-plugin-monkey: 2.8.0_vite@3.1.8
-      vite-tsconfig-paths: 3.5.2_vite@3.1.8
+      vite: 3.2.1
+      vite-plugin-monkey: 2.8.0_vite@3.2.1
+      vite-tsconfig-paths: 3.5.2_vite@3.2.1
+
+  packages/example-tsc:
+    specifiers:
+      typescript: ^4.8.4
+    devDependencies:
+      typescript: 4.8.4
 
   packages/novel-ai-tag:
     specifiers:
       '@issenn/userscript-config': workspace:*
       '@issenn/userscript-utils': workspace:*
-      '@types/node': ^18.11.3
-      rollup: ^3.2.3
       typescript: ^4.8.4
       vite: ^3.1.8
       vite-plugin-monkey: ^2.8.0
@@ -39,12 +45,10 @@ importers:
       '@issenn/userscript-config': link:../../shared/userscript-config
       '@issenn/userscript-utils': link:../../shared/userscript-utils
     devDependencies:
-      '@types/node': 18.11.3
-      rollup: 3.2.3
       typescript: 4.8.4
-      vite: 3.1.8
-      vite-plugin-monkey: 2.8.0_vite@3.1.8
-      vite-tsconfig-paths: 3.5.2_vite@3.1.8
+      vite: 3.2.1
+      vite-plugin-monkey: 2.8.0_vite@3.2.1
+      vite-tsconfig-paths: 3.5.2_vite@3.2.1
 
   shared/userscript-config:
     specifiers:
@@ -55,8 +59,8 @@ importers:
     devDependencies:
       tsup: 6.3.0_typescript@4.8.4
       typescript: 4.8.4
-      vite: 3.1.8
-      vite-plugin-monkey: 2.8.0_vite@3.1.8
+      vite: 3.2.1
+      vite-plugin-monkey: 2.8.0_vite@3.2.1
 
   shared/userscript-utils:
     specifiers:
@@ -64,7 +68,7 @@ importers:
       tsup: 6.3.0
       typescript: ^4.8.4
     devDependencies:
-      '@types/node': 18.11.3
+      '@types/node': 18.11.7
       tsup: 6.3.0_typescript@4.8.4
       typescript: 4.8.4
 
@@ -113,8 +117,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@types/node/18.11.3:
-    resolution: {integrity: sha512-fNjDQzzOsZeKZu5NATgXUPsaFaTxeRgFXoosrHivTl8RGeV733OLawXsGfEk9a8/tySyZUyiZ6E8LcjPFZ2y1A==}
+  /@types/node/18.11.7:
+    resolution: {integrity: sha512-LhFTglglr63mNXUSRYD8A+ZAIu5sFqNJ4Y2fPuY7UlrySJH87rRRlhtVmMHplmfk5WkoJGmDjE9oiTfyX94CpQ==}
     dev: true
 
   /address/1.2.1:
@@ -568,6 +572,17 @@ packages:
       path-is-absolute: 1.0.1
     dev: true
 
+  /glob/7.2.3:
+    resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 3.1.2
+      once: 1.4.0
+      path-is-absolute: 1.0.1
+    dev: true
+
   /globby/11.1.0:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
@@ -854,6 +869,12 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
   /punycode/2.1.1:
     resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
     engines: {node: '>=6'}
@@ -899,25 +920,16 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rollup/2.78.1:
-    resolution: {integrity: sha512-VeeCgtGi4P+o9hIg+xz4qQpRl6R401LWEXBmxYKOV4zlF82lyhgh2hTZnheFUbANE8l2A41F458iwj2vEYaXJg==}
-    engines: {node: '>=10.0.0'}
+  /rimraf/3.0.2:
+    resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
     hasBin: true
-    optionalDependencies:
-      fsevents: 2.3.2
+    dependencies:
+      glob: 7.2.3
     dev: true
 
   /rollup/2.79.1:
     resolution: {integrity: sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw==}
     engines: {node: '>=10.0.0'}
-    hasBin: true
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
-  /rollup/3.2.3:
-    resolution: {integrity: sha512-qfadtkY5kl0F5e4dXVdj2D+GtOdifasXHFMiL1SMf9ADQDv5Eti6xReef9FKj+iQPR2pvtqWna57s/PjARY4fg==}
-    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
@@ -1080,7 +1092,7 @@ packages:
     hasBin: true
     dev: true
 
-  /vite-plugin-monkey/2.8.0_vite@3.1.8:
+  /vite-plugin-monkey/2.8.0_vite@3.2.1:
     resolution: {integrity: sha512-lvPeW0AJ9VYHCWa+PBne3nW5lCAsBvLM1HT6estKpbKJei/qUG/dbKJyMgL8gXIWU5lbVawRTMBNRoPhj4+9dA==}
     engines: {node: ^14.18 || >= 16, pnpm: '>=6'}
     peerDependencies:
@@ -1092,12 +1104,12 @@ packages:
       mrmime: 1.0.1
       open: 8.4.0
       picocolors: 1.0.0
-      vite: 3.1.8
+      vite: 3.2.1
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite-tsconfig-paths/3.5.2_vite@3.1.8:
+  /vite-tsconfig-paths/3.5.2_vite@3.2.1:
     resolution: {integrity: sha512-xJMgHA2oJ28QCG2f+hXrcqzo7IttrSRK4A//Tp94CfuX5eetOx33qiwXHUdi3FwkHP2ocpxHuvE45Ix67gwEmQ==}
     peerDependencies:
       vite: '>2.0.0-0'
@@ -1106,19 +1118,20 @@ packages:
       globrex: 0.1.2
       recrawl-sync: 2.2.3
       tsconfig-paths: 4.1.0
-      vite: 3.1.8
+      vite: 3.2.1
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite/3.1.8:
-    resolution: {integrity: sha512-m7jJe3nufUbuOfotkntGFupinL/fmuTNuQmiVE7cH2IZMuf4UbfbGYMUT3jVWgGYuRVLY9j8NnrRqgw5rr5QTg==}
+  /vite/3.2.1:
+    resolution: {integrity: sha512-ADtMkfHuWq4tskJsri2n2FZkORO8ZyhI+zIz7zTrDAgDEtct1jdxOg3YsZBfHhKjmMoWLOSCr+64qrEDGo/DbQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
       less: '*'
       sass: '*'
       stylus: '*'
+      sugarss: '*'
       terser: ^5.4.0
     peerDependenciesMeta:
       less:
@@ -1127,13 +1140,15 @@ packages:
         optional: true
       stylus:
         optional: true
+      sugarss:
+        optional: true
       terser:
         optional: true
     dependencies:
       esbuild: 0.15.12
       postcss: 8.4.18
       resolve: 1.22.1
-      rollup: 2.78.1
+      rollup: 2.79.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true

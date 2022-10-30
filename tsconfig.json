@@ -1,6 +1,12 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  // "compilerOptions": {
+  //   "skipLibCheck": true
+  // },
   "files": [],
   "include": [],
   "references": [
+    { "path": "./packages/automatic-refresh" },
+    { "path": "./packages/novel-ai-tag" }
   ]
 }

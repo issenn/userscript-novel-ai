@@ -1,8 +1,8 @@
-import * as fs from 'node:fs';
+import * as fs from 'node:fs/promises';
 
 
-export const dataURI: (s :string) => string = (path: string): string => {
+export const dataURI = async (filePath: string): Promise<string> => {
   const scheme: string = 'data:image/svg+xml;base64,'
-  const base64 = fs.readFileSync(path, { encoding: 'base64' });
+  const base64: string = await fs.readFile(filePath, { encoding: 'base64' });
   return scheme + base64
 }
