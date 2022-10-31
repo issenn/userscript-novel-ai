@@ -1,0 +1,17 @@
+!fuck
+# Prevent suggesting these words
+codeceptjs
+codepaths
+dataurl
+defaulticon
+esbuild
+issenn
+noncomposite
+preinstall
+saraba
+stylelint
+subdirs
+Tampermonkey
+tsbuildinfo
+tsup
+userscript

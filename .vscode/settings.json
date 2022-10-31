@@ -1,20 +1,12 @@
 {
     "npm.packageManager": "pnpm",
-    "cSpell.words": [
-        "codeceptjs",
-        "codepaths",
-        "dataurl",
-        "defaulticon",
-        "esbuild",
-        "issenn",
-        "noncomposite",
-        "preinstall",
-        "saraba",
-        "stylelint",
-        "subdirs",
-        "Tampermonkey",
-        "tsbuildinfo",
-        "tsup",
-        "userscript"
-    ]
+    // "cSpell.words": [],
+    // "cSpell.customDictionaries": {
+    //     "custom-dictionary-workspace": {
+    //         "name": "custom-dictionary-workspace",
+    //         "path": "${workspaceFolder:userscript-novel-ai}/.cspell/custom-dictionary-workspace.txt",
+    //         "addWords": true,
+    //         "scope": "workspace"
+    //     }
+    // }
 }
